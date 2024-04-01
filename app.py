@@ -44,9 +44,9 @@ def all_users():
     context = {'users': users}
     return render_template('users.html', **context)
 
-@app.route('/users/<username>/')
-def users_by_username(username):
-    users = User.query.filter(User.username == username).all()
+@app.route('/users/<lastname>/')
+def users_by_lastname(lastname):
+    users = User.query.filter(User.lastname == lastname).all()
     context = {'users': users}
     return render_template('users.html', **context)
 
